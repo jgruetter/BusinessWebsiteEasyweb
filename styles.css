@@ -12,14 +12,6 @@ header {
     position: relative;
 }
 
-header.hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-}
-
-header.hero-about {
-    background: url('hero-about.jpg') no-repeat center center/cover;
-}
-
 header.hero-contact {
     background: url('hero-contact.jpg') no-repeat center center/cover;
 }
@@ -78,26 +70,36 @@ section {
     text-align: center;
 }
 
-.services, .testimonials, .team, .contact-details {
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 20px 0;
 }
 
-.service, .team-member {
-    max-width: 300px;
-    text-align: center;
-}
-
-.team-member img, .service img {
+.contact-form-container iframe {
     width: 100%;
-    border-radius: 10px;
+    max-width: 600px;
+    height: 800px;
+    border: none;
 }
 
-blockquote {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-left: 5px solid #007BFF;
+.contact-details {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+.map {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 footer {
@@ -111,32 +113,4 @@ footer {
     color: white;
     margin: 0 10px;
     text-decoration: none;
-}
-
-.contact-form form {
-    max-width: 600px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form label {
-    margin-top: 10px;
-    text-align: left;
-}
-
-.contact-form input, .contact-form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
 }
