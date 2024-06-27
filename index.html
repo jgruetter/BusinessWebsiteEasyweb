@@ -3,35 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Business</title>
+    <title>Business Homepage</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function loadPage(page) {
-            fetch(page)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('content').innerHTML = data;
-                });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            loadPage('homepage.html');
-            document.querySelectorAll('nav a').forEach(link => {
-                link.addEventListener('click', event => {
-                    event.preventDefault();
-                    loadPage(event.target.getAttribute('href'));
-                });
-            });
-        });
-    </script>
 </head>
 <body>
-    <nav>
-        <a href="homepage.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-    <div id="content"></div>
+    <header class="hero">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Welcome to Our Business</h1>
+            <p>Your satisfaction is our priority</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </header>
+    <section class="introduction">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing the best service for our customers.</p>
+    </section>
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <img src="service1.jpg" alt="Service 1">
+            <h3>Service 1</h3>
+            <p>Short description of service 1.</p>
+        </div>
+        <div class="service">
+            <img src="service2.jpg" alt="Service 2">
+            <h3>Service 2</h3>
+            <p>Short description of service 2.</p>
+        </div>
+        <div class="service">
+            <img src="service3.jpg" alt="Service 3">
+            <h3>Service 3</h3>
+            <p>Short description of service 3.</p>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2>Customer Testimonials</h2>
+        <blockquote>
+            <p>Great service! Highly recommend.</p>
+            <footer>- Happy Customer</footer>
+        </blockquote>
+        <blockquote>
+            <p>Exceptional quality and support.</p>
+            <footer>- Satisfied Client</footer>
+        </blockquote>
+    </section>
     <footer>
         <p>&copy; 2024 Our Business. All rights reserved.</p>
     </footer>
