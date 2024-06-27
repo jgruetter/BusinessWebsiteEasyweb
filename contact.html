@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Hide Google Forms footer and other elements */
+        iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+        .contact-form-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .contact-form-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Additional CSS to hide Google Forms specific elements */
+        .hide-footer {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header class="hero-contact">
@@ -19,7 +43,9 @@
     </header>
     <section class="contact-form">
         <h2>Get in Touch</h2>
-        <iframe src="https://forms.gle/RprpaUzUhGi8e4Px7" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div class="contact-form-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfxk-lwqljhB5j5SKs7A2OSffYQ2aENXBlJmO8Gk3URSAe6ng/viewform?embedded=true"></iframe>
+        </div>
     </section>
     <section class="contact-details">
         <h2>Contact Details</h2>
@@ -27,4 +53,16 @@
         <p>Email: info@ourbusiness.com</p>
         <p>Address: 123 Business St, Business City, BC 12345</p>
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0865270616675!2d-122.4194162846829!3d37.77492927975854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085815288eae115%3A0x5c70b2a82e1c5
+            <iframe src="https://forms.gle/RprpaUzUhGi8e4Px7" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <footer>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <p>&copy; 2024 Our Business. All rights reserved.</p>
+    </footer>
+</body>
+</html>
